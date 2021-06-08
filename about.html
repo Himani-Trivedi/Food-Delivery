@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="foodicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="aboutcss.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+  </style>
+  <title>About</title>
+  <script>
+    $(document).ready(function () {
+      // $("#w1").mouseenter(function () {
+      //   $("#w1text").slideToggle("slow");
+      //   $("#w1text").addClass("workchildtext");
+      // });
+
+      // $("#w1").mouseleave(function () {
+      //   $("#w1text").hide();
+      // });
+
+      // $("#w2").mouseenter(function () {
+      //   $("#w2text").slideToggle("slow");
+      //   $("#w2text").addClass("workchildtext");
+      // });
+
+      // $("#w2").mouseleave(function () {
+      //   $("#w2text").hide();
+      // });
+
+    $(window).scroll(function() {
+    var x=$(document).scrollTop();
+      if( x > 120){
+        $("#w1text").fadeToggle(1800);
+        $("#w1text").addClass("workchildtext");
+        $("#w2text").fadeToggle(1800);
+        $("#w2text").addClass("workchildtext");
+      }
+    });
+    });
+
+  </script>
+</head>
+
+<body>
+
+  <div class="headback">
+    <div class="logo">
+      <a href="index.html">
+        <img src="foodicon.ico" alt="Icon" srcset="">
+        <div style="padding-left: 10px;">
+          <b>Foodies</b>
+        </div>
+      </a>
+    </div>
+    <span class="ustext">
+      US.
+    </span>
+  </div>
+
+  <div class="aboutus">
+    <div class="text" style='font-size:30px;'>
+      About US
+    </div>
+    <div style='font-size:60px;' class="arrow">&#8595;</div>
+    <div id="text" style='font-size:40px;'>
+      What we do.
+    </div>
+  </div>
+
+  <div class="work">
+    <div class="workchild" id="w1">
+      <div style='display:none;' id="w1text">
+        We Make Food
+      </div>
+    </div>
+    <div class="workchild" id="w2">
+      <div style='display: none;' id="w2text">
+        We deliver Food
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="filldetail">
+      <h1>Contact Us</h1>
+      <div class="media">
+        <a href="https://www.facebook.com/himani.trivedi.796" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/HimaniTrivedi13" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/channel/UCTy1R9sN1VWLXvEU4bHXe4w" target="_blank" class="fa fa-youtube"></a>
+        <a href="https://www.linkedin.com/in/himani-trivedi-858797208/?trk=public_profile-settings_edit-profile-content&originalSubdomain=in" class="fa fa-linkedin" target="_blank"></a>
+        <a href="https://www.instagram.com/himani_trivedi184/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://in.pinterest.com/himanitrivedi1874/_saved/" target="_blank" class="fa fa-pinterest"></a>
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" onfocus="this.value=''" placeholder="name@example.com" name="mail">
+
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Statement</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" onfocus="this.value=''"></textarea>
+      </div>
+      <button type="button" class="btn btn-secondary btn-lg" onclick="statement()">Submit</button>
+    </div>
+      
+    <div class="filldetail" id="map" ></div>
+
+  </div>
+
+  <br>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAGSjvIVVkmZtPnLeAfFfzKkI7d8TVc-E&callback=initMap"
+type="text/javascript"></script>
+
+<script>
+  function statement(){
+    if(!$("#exampleFormControlInput1").val()){
+      $("#exampleFormControlInput1").focus();
+    }
+    else if(!$("#exampleFormControlTextarea1").val()){
+          $("#exampleFormControlTextarea1").focus();
+        }
+    else{
+          if(confirm("Are You sure?")){
+            alert("Your Data is stored with us.Thank You!!");
+            
+  }
+}
+}
+
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: {lat : 22.983109372126002,lng : 72.64280894987041},
+      zoom: 20,
+      mapTypeId: "hybrid",
+    });
+  }
+
+
+</script>
+</html>
