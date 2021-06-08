@@ -124,7 +124,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAGSjvIVVkmZtPnLeAfFfzKkI7d8TVc-E&callback=initMap"
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAGSjvIVVkmZtPnLeAfFfzKkI7d8TVc-E&callback=initMap&libraries=&v=weekly&region=In"
 type="text/javascript"></script>
 
 <script>
@@ -149,6 +149,19 @@ type="text/javascript"></script>
       zoom: 20,
       mapTypeId: "hybrid",
     });
+
+    const marker = new google.maps.Marker({
+    position: { lat : 22.983109372126002, lng : 72.64280894987041},
+    map: map,
+    });
+
+    const infowindow = new google.maps.InfoWindow({
+    content: "<p>Marker Location:" + marker.getPosition() + "</p>",
+    });
+    google.maps.event.addListener(marker, "click", () => {
+      infowindow.open(map, marker);
+    });
+
   }
 
 
