@@ -153,6 +153,7 @@ type="text/javascript"></script>
     const marker = new google.maps.Marker({
     position: { lat : 22.983109372126002, lng : 72.64280894987041},
     map: map,
+    title:"Click Me to See Lat & Lng",
     });
 
     const infowindow = new google.maps.InfoWindow({
@@ -161,6 +162,7 @@ type="text/javascript"></script>
     google.maps.event.addListener(marker, "click", () => {
       infowindow.open(map, marker);
     });
+
 
   }
 
