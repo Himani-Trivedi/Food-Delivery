@@ -197,9 +197,12 @@ opacity: 0.7;
 
     .filldetail h1{font-size: 30px;}
 
-    #exampleFormControlInput1{width: 50px;}
+    #exampleFormControlInput1{width: 90%;}
 
-    #exampleFormControlTextarea1{width: 50px;}
+    #exampleFormControlTextarea1{width: 90%;}
 
+    .filldetail button{
+        width: 50%;
+    }
   
 }
