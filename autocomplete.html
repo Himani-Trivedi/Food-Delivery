@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHe7g35FhdlcBShrYm9ykEZo9K5QzdAXs&libraries=places&callback=initMap">
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>AutoComplete</title>
+</head>
+
+<body>
+    <div class="search" style="padding-top: 10px; align-content: center;">
+        <label for="search" style="font-size: 30px;">Place:</label>
+        <input type="text" placeholder="Search Here...." class="validate" id="input_search">
+    </div>
+</body>
+
+<script>
+    function initMap() {
+        const input = document.getElementById("input_search");
+        const options = {
+            componentRestrictions: { country: "in" },
+            fields: ["address_components", "geometry", "icon", "name"],
+            types: ["establishment"],
+        };
+        const autocomplete = new google.maps.places.Autocomplete(input, options);
+    }
+
+
+</script>
+
+</html>

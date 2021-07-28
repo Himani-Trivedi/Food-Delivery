@@ -61,46 +61,6 @@ color: #fff;}
     font-size: 40px;
 }
 
-@media screen and (max-width: 600px){
-    .headback{
-        height: 400px;
-    }
-
-    .ustext{padding-top: 70px;}
-
-    .work{
-        flex-direction: column;
-    }
-
-    .workchild{
-        width: 300px;
-        height: 300px;
-        margin: 20px;
-    }
-
-    .media{display: flex;}
-
-    .contact{
-        width: auto;
-        height: auto;
-    }
-
-    .filldetail{
-        padding:0px; 
-        margin: 0px;
-        overflow: hidden;
-        height: auto;
-    }
-
-    .filldetail h1{font-size: 30px;}
-
-    #exampleFormControlInput1{width: 50px;}
-
-    #exampleFormControlTextarea1{width: 50px;}
-
-  
-}
-
 .logo{
     margin-left: 15px;
 }
@@ -193,3 +153,53 @@ opacity: 0.7;
   }
   
 
+  @media screen and (max-width: 600px){
+    .headback{
+        height: 400px;
+    }
+
+    .ustext{padding-top: 70px;}
+
+    .work{
+        flex-direction: column;
+    }
+
+    .workchild{
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+    }
+
+    .media{display: flex;}
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #first{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        justify-content: center;
+        position: relative;
+        top: 40%;
+    }
+
+    #map{
+        width: 70%;
+        padding: 100px;
+        position: relative;
+        top: 30%;
+    }
+
+    .filldetail h1{font-size: 30px;}
+
+    #exampleFormControlInput1{width: 50px;}
+
+    #exampleFormControlTextarea1{width: 50px;}
+
+  
+}
